@@ -1,0 +1,12 @@
+# Java
+*.class
+*.jar
+*.war
+*.log
+*.iml
+target/
+build/
+.idea/
+*.DS_Store
+*.env
+.env
