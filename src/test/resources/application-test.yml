@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  
+  h2:
+    console:
+      enabled: false
+
+logging:
+  level:
+    com.fairoz: WARN
+    org.springframework: WARN
+
+payment:
+  gateways:
+    - name: "razorpay"
+      weight: 40
+      enabled: true
+    - name: "payu"
+      weight: 35
+      enabled: true
+    - name: "cashfree"
+      weight: 25
+      enabled: true
+  
+  health:
+    success-rate-threshold: 90.0
+    monitoring-window-minutes: 15
+    disable-duration-minutes: 30
