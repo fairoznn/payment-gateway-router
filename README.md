@@ -12,7 +12,7 @@ You can test the API endpoints using the following curl commands:
 
 #### 1. Initiate a Transaction
 ```bash
-curl -X POST https://payment-gateway-router.onrender.com/transactions/initiate \
+curl -X POST https://payment-gateway-router-aub0.onrender.com/transactions/initiate \
   -H "Content-Type: application/json" \
   -d '{
     "order_id": "ORD123",
@@ -29,7 +29,7 @@ curl -X POST https://payment-gateway-router.onrender.com/transactions/initiate \
 
 #### 2. Send Transaction Callback
 ```bash
-curl -X POST https://payment-gateway-router.onrender.com/transactions/callback \
+curl -X https://payment-gateway-router-aub0.onrender.com/transactions/callback \
   -H "Content-Type: application/json" \
   -d '{
     "order_id": "ORD123",
@@ -41,12 +41,12 @@ curl -X POST https://payment-gateway-router.onrender.com/transactions/callback \
 
 #### 3. Check Gateway Health
 ```bash
-curl https://payment-gateway-router.onrender.com/monitoring/health
+curl https://payment-gateway-router-aub0.onrender.com/monitoring/health
 ```
 
 #### 4. Application Health Check
 ```bash
-curl https://payment-gateway-router.onrender.com/actuator/health
+curl https://payment-gateway-router-aub0.onrender.com/actuator/health
 ```
 
 ---
